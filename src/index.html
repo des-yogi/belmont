@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Belmont Logistic</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="container">
+        @@include('blocks/page-header/page-header.html')
+      </div>
+
+      <main role="main">
+
+        <h1 class="visually-hidden">Belmont Logistic — Международные транспортные перевозки</h1>
+
+        <article class="track-cargo">
+          <div class="container">
+            <div class="row">
+
+              <div class="track-cargo__car-col">
+
+                <div class="track-cargo__car">
+                  <picture>
+                    <source srcset="img/cargo-car-desktop@1x.png" media="(min-width: 1280px)">
+                    <source srcset="img/cargo-car-desktop@1x.png" media="(min-width: 768px)">
+                    <img src="img/cargo-car-mobile@1x.png" alt="Грузовой трак Belmont Logistic" width="480" height="184">
+                  </picture>
+                </div>
+
+                <div class="track-cargo__status">
+                  <dl class="track-cargo__track-num">
+                    <dt>Номер накладної:</dt>
+                      <dd>245 256 245 256</dd>
+                  </dl>
+                  <dl class="track-cargo__track-list">
+                    <dt>Країна відправлення:</dt>
+                      <dd>Україна</dd>
+                    <dt>Місто відправлення:</dt>
+                      <dd>Київ</dd>
+                    <dt>Країна одержання:</dt>
+                      <dd>Польша</dd>
+                    <dt>Місто одержання:</dt>
+                      <dd>Варшава</dd>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="track-cargo__form-col">
+
+                <article class="tracking-form">
+                  <h2 class="h1  tracking-form__title">Відстежити вантаж</h2>
+                  <p class="tracking-form__call">Введіть номер накладної та нитисніть кнопку відстежити.</p>
+                  <div class="tracking-form__form-wrapper">
+                    <form id="tracking-form" class="tracking-form__form" action="" method="post">
+                      <div class="tracking-form__input-wrapper">
+                        <input id="tracking-num" type="text" name="tracking-num" value="" placeholder="_  _  _  _">
+                        <button id="submit-btn" class="btn" type="button" name="submit">Відстежити</button>
+                      </div>
+                      <div class="tracking-form__error-info">Ошибка, по данному номеру ничего не найдено…</div>
+                    </form>
+                  </div>
+                  <section class="tracking-scheme">
+                    <table class="tracking-scheme__table">
+                      <tr>
+                        <td>12.08.2018</td>
+                        <td>Img</td>
+                        <td>Прийнято до доставки</td>
+                      </tr>
+                      <tr>
+                        <td>12.08.2018</td>
+                        <td>Img</td>
+                        <td>Підготовлено до відправки</td>
+                      </tr>
+                      <tr>
+                        <td>12.08.2018</td>
+                        <td>Img</td>
+                        <td>Пройшов митне оформлення</td>
+                      </tr>
+                      <tr>
+                        <td>12.08.2018</td>
+                        <td>Img</td>
+                        <td>Доставляється до Польщі</td>
+                      </tr>
+                      <tr>
+                        <td>12.08.2018</td>
+                        <td>Img</td>
+                        <td>Вантаж прийнято</td>
+                      </tr>
+                    </table>
+                  </section>
+                </article>
+
+              </div>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="about">
+          <div class="container">
+            <div class="row">
+
+              <div class="about__col-text">
+                <section class="about__text">
+                  <h2 class="about__title">Про компанію</h2>
+                  <p class="about__para">Компанія заснована в 2008 році в місті Одеса, як експедиторська компанія в Одеському порту. З часу заснована компанія показала стрімке зростання розвитку на міжнародному транспортному ринку і на сьогоднішній день вже надає повний комплекс логістичних послуг.</p>
+                </section>
+              </div>
+
+              <div class="about__col-img">
+                <div class="about__img"></div>
+              </div>
+
+            </div>
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

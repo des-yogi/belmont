@@ -1,0 +1,13 @@
+.tracking-scheme {
+  display: none;
+
+  @media (min-width: $screen-md) {}
+
+  @media (min-width: $screen-xl) {}
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__table {
+
+  }
+}

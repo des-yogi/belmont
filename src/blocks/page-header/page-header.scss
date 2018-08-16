@@ -1,0 +1,36 @@
+.page-header {
+
+  .row {
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .logo {
+    @include col-offset(xs, 1);
+    @include col(xs, 10);
+    @include col-offset(md, 0);
+    @include col(md, 4);
+    @include col-offset(xl, 1);
+    @include col(xl, 3);
+  }
+
+  .call-us {
+    @include col-offset(xs, 1);
+    @include col(xs, 10);
+    @include col-offset(md, 0);
+    @include col(md, 8);
+    @include col(xl, 8);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+}

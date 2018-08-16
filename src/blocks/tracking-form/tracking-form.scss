@@ -1,0 +1,60 @@
+.tracking-form {
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 60px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__call {
+    margin-top: 0;
+    font-family: $font-family--headings;
+  }
+
+  &__form-wrapper {
+  }
+
+  &__form {
+
+  }
+
+  &__input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: $shadow;
+
+    input {
+      width: calc(100% - 130px);
+      padding: 10px 5px;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: $font-family--headings;
+      text-align: center;
+      text-transform: uppercase;
+      color: $main-color;
+      border: none;
+
+      &:focus {
+        outline-color: $main-color;
+      }
+    }
+  }
+
+  &__error-info {
+    line-height: 1.3em;
+    color: $error-color;
+  }
+}

@@ -1,0 +1,266 @@
+// Этот блок ответственен ТОЛЬКО за типографику проекта.
+
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/montserrat-v12-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v12-cyrillic_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-500 - cyrillic_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+       url('../fonts/montserrat-v12-cyrillic_latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v12-cyrillic_latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* ubuntu-regular - cyrillic_latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+       url('../fonts/ubuntu-v12-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/ubuntu-v12-cyrillic_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* ubuntu-500 - cyrillic_latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'),
+       url('../fonts/ubuntu-v12-cyrillic_latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/ubuntu-v12-cyrillic_latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+body {
+  // ТОЛЬКО типографика!
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: $line-height;
+  color: $text-color;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-family--headings;
+  font-weight: 500;
+  line-height: $line-height;
+}
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+  margin-top: $line-height;
+  margin-bottom: ($line-height / 2);
+}
+
+.h4,
+.h5,
+h4,
+h5 {
+  margin-top: ($line-height / 2);
+  margin-bottom: ($line-height / 2);
+}
+
+.h1,
+h1 {
+  font-size: 28px;
+
+  @media (min-width: $screen-md) {
+    font-size: 35px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 52px;
+  }
+}
+
+.h2,
+h2 {
+  font-size: 25px;
+
+  @media (min-width: $screen-md) {
+    font-size: 32px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 36px;
+  }
+}
+
+.h3,
+h3 {
+  font-size: 15px;
+
+  @media (min-width: $screen-md) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 20px;
+  }
+}
+
+.h4,
+h4 {
+  font-size: $font-size;
+}
+
+/* .h4,
+
+.h5,
+h5 {
+  font-size: $font-size--h5;
+} */
+
+
+.p,
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+address,
+figure {
+  margin-top: ($line-height / 2);
+  margin-bottom: ($line-height / 2);
+  font-size: $font-size;
+  font-family: $font-family;
+  font-weight: inherit;
+  line-height: inherit;
+  color: currentColor;
+  hyphens: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+ul,
+ol {
+  padding-left: 1.2em;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  line-height: inherit;
+}
+
+hr {
+  margin-top: $line-height;
+  margin-bottom: $line-height;
+  border: 0;
+  border-top: 1px solid $border-color;
+}
+
+.small,
+small {
+  font-size: smaller;
+}
+
+sub,
+sup {
+  font-size: 60%;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+blockquote {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: $main-color;
+  text-decoration: none;
+  transition: $transition-base;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+}
+
+ol{
+  counter-reset: myCounter;
+
+  li:before {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 0.75em;
+    counter-increment: myCounter;
+    content: counter(myCounter)".";
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: left;
+    line-height: inherit;
+    color: $main-color;
+  }
+}
+
+ul {
+
+  li:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 4px;
+    height: 4px;
+    margin-right: 0.7em;
+    margin-top: -3px;
+    border-radius: 50%;
+    background-color: $main-color;
+
+    @media (min-width: $screen-xl) {
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+q {
+  quotes:  "«" "»";
+}

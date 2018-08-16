@@ -1,0 +1,40 @@
+.track-cargo {
+
+  @media (min-width: $screen-md) {}
+
+  @media (min-width: $screen-xl) {}
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__car-col {
+    @include col(xs, 12);
+    order: 1;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-left: -10px;
+    background-color: $main-color;
+  }
+
+  &__form-col {
+    @include col(xs, 12);
+  }
+
+  &__car {
+    position: relative;
+    transform: translateX(0);
+    //animation: carOut 1.5s ease-in 1 forwards;
+  }
+
+  &__status {
+    display: none;
+  }
+
+  &__track-num {
+
+  }
+
+  &__track-list {
+
+  }
+
+}
