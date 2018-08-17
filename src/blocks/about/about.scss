@@ -1,9 +1,75 @@
-// В этом файле должны быть стили для БЭМ-блока about, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .about {
+
+  @media (min-width: $screen-md) {
+    background-image: linear-gradient(104deg, $white, $white 50%, #DFF2F9 50%, #EFFAFE 100%);
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col-text {
+    @include col(xs, 12);
+    @include col(md, 7);
+    @include col-offset(xl, 1);
+    @include col(xl, 6);
+
+    @media (min-width: $screen-md) {
+      background-color: $white;
+    }
+  }
+
+  &__col-img {
+    @include col(xs, 12);
+    @include col(md, 5);
+    @include col(xl, 5);
+
+    @media (min-width: $screen-md) {
+      margin-top: auto;
+    }
+  }
+
+  &__text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      height: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 115px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__img {
+    min-height: 320px;
+    margin-left: -20px;
+    margin-right: -20px;
+    background-image: url(../img/container-bg-mobile@1x.png),
+                      $gradient--light;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 228px 274px, cover;
+
+    @media (min-width: $screen-md) {
+      flex-shrink: 0;
+      margin-left: -10px;
+      margin-right: 0;
+      background-image: url(../img/container-bg-desktop@1x.png),
+                        none;
+      background-size: 228px 274px;
+    }
+
+    @media (min-width: $screen-xl) {
+      min-height: 460px;
+      background-image: url(../img/container-bg-desktop@1x.png);
+      background-size: 350px 420px, cover;
+    }
+  }
 }

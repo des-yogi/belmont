@@ -16,7 +16,7 @@ $white:                       hsl(0, 0%, 100%);
 
 $main-color:                  #3bbffa;
 $text-color:                  #4c4c4c;
-//$text-muted:                #BDBDBD;
+$text-muted:                  #A09E9F;
 $footer-color:                $text-color;
 $gradient:                    linear-gradient(107deg, #2EB3EE 0%, #42C5FF 100%);
 $gradient--light:             linear-gradient(104deg, #DFF2F9 0%, #EFFAFE 100%);
@@ -37,9 +37,8 @@ $font-size--small:            0.65em; */
 
 $line-height:                 1.5em;
 
-$font-family:                 'Montsserat', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family:                 'Montserrat', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
 $font-family--headings:       'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
-
 
 
 // Ширины
@@ -55,7 +54,7 @@ $container-sm:                100%;
 $container-md:                100%;
 $container-lg:                100%;
 $container-xl:                $screen-xl - 20;
-$container-xxl:               $screen-xxl - 20;
+// $container-xxl:               $screen-xxl - 20;
 
 
 

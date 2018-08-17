@@ -1,40 +1,198 @@
 .track-cargo {
 
-  @media (min-width: $screen-md) {}
+  .row {
+    position: relative;
 
-  @media (min-width: $screen-xl) {}
+    @media (min-width: $screen-md) {
+      min-height: 500px;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 50px;
+    background: linear-gradient(to right, #2EB3EE, #42C5FF 45%, $white 45%);
+  }
+
+  @media (min-width: $screen-xl) {
+    background: linear-gradient(to right, #2EB3EE, #42C5FF 50%, $white 50%);
+  }
 
   $block-name:                &; // #{$block-name}__element
 
   &__car-col {
     @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 7);
+
     order: 1;
     padding-top: 15px;
     padding-bottom: 20px;
     margin-left: -10px;
     background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      padding-top: 20px;
+      margin-left: 0;
+      order: 0;
+      background: linear-gradient(to right, transparent, #42C5FF);
+    }
+
+    @media (min-width: $screen-xl) {
+      background: red;
+      background: linear-gradient(to right, transparent, transparent 485px, $white 485px, $white);
+    }
   }
 
   &__form-col {
     @include col(xs, 12);
+    // @include col-offset(md, 4);
+    @include col(md, 8);
+    @include col(xl, 5);
+
+    @media (min-width: $screen-md) {
+      padding-left: 8.3%;
+      background-color: $white;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 90px; // При наличии авто, иначе см. ниже
+      padding-top: 0;
+    }
   }
 
   &__car {
-    position: relative;
+    display: block;
+    // visibility: hidden;
+
     transform: translateX(0);
     //animation: carOut 1.5s ease-in 1 forwards;
+
+    img {
+      display: block;
+
+      @media (min-width: $screen-md) {
+        width: 690px;
+        height: 265px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      visibility: hidden;
+
+      position: absolute;
+      z-index: 5;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 690px;
+      //animation: carOutMedium 2s ease-in 1 forwards;
+    }
+
+    @media (min-width: $screen-xl) {
+      left: 0;
+      transform: translateX(0);
+      //animation: carOutLong 2s ease-in 1 forwards;
+    }
   }
 
   &__status {
     display: none;
+
+    max-width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      // visibility: hidden;
+
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 450px;
+      margin-right: 0;
+    }
+  }
+
+  &__track-num,
+  &__track-list {
+    padding: 20px 25px;
+    font-size: 1em;
+    font-weight: 500;
+
+    dt {
+      margin-bottom: 8px;
+      font-family: $font-family;
+    }
+
+    dd {
+      margin-left: 0;
+      margin-bottom: 25px;
+      font-family: $font-family--headings;
+      font-size: larger;
+
+      @media (min-width: $screen-xl) {
+        font-size: 20px;
+      }
+    }
   }
 
   &__track-num {
+    background-color: $white;
+    box-shadow: $shadow;
+    border-radius: $border-radius;
 
+    dd {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-left: -40px;
+      padding-left: 60px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-left: 0;
+      padding-left: 40px;
+    }
   }
 
   &__track-list {
+    margin-bottom: 0;
+    color: $white;
 
+    dd:last-child {
+      margin-bottom: 0;
+    }
+
+    dt {
+      @media (min-width: $screen-xl) {
+        width: 50%;
+        margin-right: 30px;
+      }
+    }
+
+    dd {
+      @media (min-width: $screen-xl) {
+        width: calc(50% - 30px);
+        margin-bottom: 40px;
+        text-align: left;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-top: 40px;
+      padding-left: 40px;
+      padding-right: 0;
+    }
   }
-
 }

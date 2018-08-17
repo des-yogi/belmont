@@ -1,9 +1,106 @@
-// В этом файле должны быть стили для БЭМ-блока contacts, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .contacts {
+  padding-top: 50px;
+  padding-bottom: 30px;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  section {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      @media (min-width: $screen-xl) {
+        width: 190px;
+        margin-right: 20px;
+      }
+    }
+
+    &:nth-child(4) {
+      @media (min-width: $screen-xl) {
+        width: 290px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      width: calc(50% - 15px);
+    }
+  }
+
+  a {
+    color: $white;
+  }
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $screen-xl) {
+    justify-content: flex-start;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    &::after {
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      content: "";
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(179.04deg, #2EB3EE 0%, #42C5FF 100%);
+    }
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+      order: -4;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-md) {
+      order: -3;
+    }
+  }
+
+  &__link {
+    margin-bottom: 0.75em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__address {
+    @media (min-width: $screen-md) {
+      order: -2;
+    }
+
+    @media (min-width: $screen-xl) {
+
+    }
+  }
+
+  &__email {
+    @media (min-width: $screen-md) {
+      order: -1;
+    }
+  }
 }
