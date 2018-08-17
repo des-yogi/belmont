@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $screen-xl) {
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -19,6 +19,11 @@
   &__call {
     margin-top: 0;
     font-family: $font-family--headings;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
   }
 
   &__form-wrapper {
@@ -50,11 +55,34 @@
       &:focus {
         outline-color: $main-color;
       }
+
+      @media (min-width: $screen-xl) {
+        width: calc(100% - 180px);
+        font-size: 20px;
+      }
+    }
+
+    .btn {
+      @media (min-width: $screen-xl) {
+        width: 180px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 50px;
     }
   }
 
   &__error-info {
+    margin-bottom: 30px;
     line-height: 1.3em;
     color: $error-color;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      min-height: 50px;
+      margin-bottom: 50px;
+      //display: none;
+    }
   }
 }
