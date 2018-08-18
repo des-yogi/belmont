@@ -36,3 +36,15 @@
     opacity: 0.1;
   }
 }
+
+.animation {
+  animation: carOut 1s ease-in 1 both;
+
+  @media (min-width: $screen-md) {
+    animation: carOutMedium 1.3s ease-in 1 both;
+  }
+
+  @media (min-width: $screen-xl) {
+    animation: carOutLong 1.5s ease-in 1 both;
+  }
+}
