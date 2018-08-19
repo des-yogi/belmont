@@ -36,14 +36,14 @@
   &__input-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-radius: $border-radius;
     overflow: hidden;
     box-shadow: $shadow;
 
     input {
       width: calc(100% - 130px);
-      padding: 10px 5px;
+      padding: 10px 15px;
       font-size: 16px;
       font-weight: 500;
       font-family: $font-family--headings;
@@ -74,7 +74,10 @@
   }
 
   &__error-info {
+    display: none;
+
     margin-bottom: 30px;
+    font-size: 13px;
     line-height: 1.3em;
     color: $error-color;
     overflow: hidden;
@@ -82,7 +85,11 @@
     @media (min-width: $screen-md) {
       min-height: 50px;
       margin-bottom: 50px;
-      //display: none;
+      font-size: 14px;
+    }
+
+    &.active {
+      display: block;
     }
   }
 }
