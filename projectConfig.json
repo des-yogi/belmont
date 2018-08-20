@@ -20,7 +20,8 @@
     "tracking-form": [],
     "contacts": [],
     "copyrights": [],
-    "animation": []
+    "animation": [],
+    "page404": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
@@ -36,7 +37,8 @@
     "./node_modules/jquery-migrate/dist/jquery-migrate.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/object-fit-images/dist/ofi.js",
-    "./node_modules/jquery-masked-input/dist/jquery.masked-input.js"
+    "./node_modules/jquery-masked-input/dist/jquery.masked-input.js",
+    "./node_modules/imask/dist/imask.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

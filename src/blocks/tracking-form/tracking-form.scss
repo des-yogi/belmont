@@ -56,11 +56,31 @@
         outline-color: $main-color;
       }
 
+      &::-webkit-input-placeholder {
+        font-weight: 400;
+        color: $text-color;
+      }
+
+      &:-moz-placeholder {
+        font-weight: 400;
+        color: $text-color;
+      }
+
       @media (min-width: $screen-xl) {
         width: calc(100% - 180px);
         font-size: 20px;
       }
     }
+
+/*     input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: $text-color;
+}
+
+input:-moz-placeholder {
+  font-weight: 400;
+  color: $text-color;
+} */
 
     .btn {
       @media (min-width: $screen-xl) {

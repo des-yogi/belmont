@@ -1,0 +1,96 @@
+.page404 {
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 50px;
+    background-image: linear-gradient(to right, $main-color, $main-color 50%, $white 50%);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-text {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 6);
+
+    @media (min-width: $screen-md) {
+      order: 1;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__col-404 {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col-offset(xl, 1);
+    @include col(xl, 5);
+    background-image: linear-gradient(to left, #2EB3EE, transparent);
+
+  }
+
+  &__text-wrapper {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-md) {
+      padding-left: calc(100% / 6 + 20px);
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.3em;
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 500;
+    font-family: $font-family--headings;
+    color: $main-color;
+  }
+
+
+  &__img-wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: -20px;
+    text-align: center;
+    background-color: $main-color;
+
+    img {
+      width: 222px;
+      height: 94px;
+
+      @media (min-width: $screen-md) {
+        display: block;
+        width: 275px;
+        height: 116px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 386px;
+        height: 163px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-left: 0;
+      text-align: left;
+      background: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+  }
+}
