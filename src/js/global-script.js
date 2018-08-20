@@ -65,3 +65,18 @@ $( document ).ready(function() {
     xhr.send();*/
 
 });
+
+
+(function(){
+  // Маскированный инпут.
+  // Если будут вопросы по настройке см. https://unmanner.github.io/imaskjs/
+  var trackInput = document.getElementById('tracking-num');
+
+  if (trackInput) {
+    var inputMask = new IMask(trackInput, {
+      mask: '000  000  000  000',
+      lazy: false,  // make placeholder always visible
+      placeholderChar: '_'     // defaults to '_'
+    });
+  }
+}());
