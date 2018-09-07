@@ -21,7 +21,8 @@
     "contacts": [],
     "copyrights": [],
     "animation": [],
-    "page404": []
+    "page404": [],
+    "document": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
